@@ -1,19 +1,26 @@
 // src/components/ui/jobCard.jsx
-"use client";
+'use client';
 
-import React from "react";
-import { DollarSign } from "lucide-react";
-import Link from "next/link";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
-import Button from "./Button";
-export default function JobCard({ job }) {
+import React from 'react';
+// Import PropTypes for runtime type checking
+import PropTypes from './propTypes';
+import { DollarSign } from 'lucide-react';
+import Link from 'next/link';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
+import Button from './Button';
+function JobCard({ job }) {
   // Defensive check for the job prop
   if (!job) {
     return null; // Or return a placeholder if needed
   }
 
   return (
-    <Link href={`/jobs/${job.id}`}>
+    <Link
+      href={`/jobs/${job.id}`}
+      // Accessibility: Make the card act as a button for screen readers
+      role="button"
+      aria-label={`View details for ${job.title}`}
+    >
       <Card
         className="bg-white/5 
                    border border-[#1E90FF]/20 backdrop-blur-xl
@@ -21,9 +28,7 @@ export default function JobCard({ job }) {
                    hover:scale-102 cursor-pointer"
       >
         <CardHeader>
-          <CardTitle className="text-xl text-white font-bold">
-            {job.title}
-          </CardTitle>
+          <CardTitle className="text-xl text-white font-bold">{job.title}</CardTitle>
           <div className="flex space-x-2 text-gray-400 text-sm">
             <span>{job.location}</span>
             <span>•</span>
@@ -46,3 +51,19 @@ export default function JobCard({ job }) {
     </Link>
   );
 }
+
+// Add PropTypes for JobCard component
+// This helps catch bugs by validating the types of props at runtime
+JobCard.propTypes = {
+  job: PropTypes.shape({
+    id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    title: PropTypes.string,
+    location: PropTypes.string,
+    jobType: PropTypes.string,
+    shortDesc: PropTypes.string,
+    pay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    longDesc: PropTypes.object,
+  }),
+};
+
+export default JobCard;

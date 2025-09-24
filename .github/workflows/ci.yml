@@ -1,0 +1,35 @@
+# GitHub Actions CI workflow for Next.js project
+# Runs lint and test jobs on every push and pull request
+
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run ESLint
+        run: npm run lint
+
+      - name: Run Jest tests
+        run: npm test
+
+# This workflow ensures code quality and prevents broken code from being merged.
+# - 'npm ci' ensures a clean install based on package-lock.json
+# - Linting and tests must pass for PRs to be merged

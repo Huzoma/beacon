@@ -1,6 +1,8 @@
-import React from "react";
-import MaxWidthContainer from "../shared/max-width-container";
-import Button from "../ui/Button";
+import React from 'react';
+// Import Next.js Image for optimized image loading
+import Image from 'next/image';
+import MaxWidthContainer from '../shared/max-width-container';
+import Button from '../ui/Button';
 
 export default function Hero() {
   return (
@@ -11,19 +13,15 @@ export default function Hero() {
             Shine a Light on Your Next Opportunity.
           </h1>
           <h2 className="mb-14">
-            Beacon makes job search simple, reliable, and transparent helping
-            you see the opportunities that matter most.
+            Beacon makes job search simple, reliable, and transparent helping you see the
+            opportunities that matter most.
           </h2>
           <Button href="">Find Jobs</Button>
           <Button text="Post a Job">Post a Job</Button>
         </div>
         <div>
-          <img
-            src="/images/Rader.png"
-            alt="Hero Image"
-            width={500}
-            height={500}
-          />
+          {/* Use Next.js <Image /> for better performance and accessibility */}
+          <Image src="/images/Rader.png" alt="Hero Image" width={500} height={500} priority />
         </div>
       </MaxWidthContainer>
     </section>
