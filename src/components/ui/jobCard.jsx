@@ -1,0 +1,48 @@
+// src/components/ui/jobCard.jsx
+"use client";
+
+import React from "react";
+import { DollarSign } from "lucide-react";
+import Link from "next/link";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
+import Button from "./Button";
+export default function JobCard({ job }) {
+  // Defensive check for the job prop
+  if (!job) {
+    return null; // Or return a placeholder if needed
+  }
+
+  return (
+    <Link href={`/jobs/${job.id}`}>
+      <Card
+        className="bg-white/5 
+                   border border-[#1E90FF]/20 backdrop-blur-xl
+                   hover:shadow-lg hover:shadow-[#1E90FF]/40 transition-all duration-300 ease-in-out
+                   hover:scale-102 cursor-pointer"
+      >
+        <CardHeader>
+          <CardTitle className="text-xl text-white font-bold">
+            {job.title}
+          </CardTitle>
+          <div className="flex space-x-2 text-gray-400 text-sm">
+            <span>{job.location}</span>
+            <span>•</span>
+            <span>{job.jobType}</span>
+          </div>
+        </CardHeader>
+        <CardContent className="text-gray-300">
+          <p>{job.shortDesc}</p>
+          {job.pay && (
+            <div className="flex items-center gap-2 mt-4 text-blue-400 font-semibold text-lg">
+              <DollarSign className="w-5 h-5" />
+              <span>{job.pay}</span>
+            </div>
+          )}
+        </CardContent>
+        <div className="p-6 pt-0">
+          <Button>View Details</Button>
+        </div>
+      </Card>
+    </Link>
+  );
+}

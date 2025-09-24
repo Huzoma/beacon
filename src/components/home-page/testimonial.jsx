@@ -17,7 +17,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="relative py-20 px-6 bg-[#0a0f1a]">
+    <section className="relative py-20 px-6 bg-black">
       <h2 className="text-3xl md:text-5xl font-bold text-white text-center mb-14">
         What People <span className="text-[#1E90FF]">Say</span>
       </h2>

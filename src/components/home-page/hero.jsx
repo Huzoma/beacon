@@ -14,8 +14,8 @@ export default function Hero() {
             Beacon makes job search simple, reliable, and transparent helping
             you see the opportunities that matter most.
           </h2>
-          <Button text="Find Jobs" className=""/>
-          <Button text="Post a Job" />
+          <Button href="">Find Jobs</Button>
+          <Button text="Post a Job">Post a Job</Button>
         </div>
         <div>
           <img

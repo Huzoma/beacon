@@ -13,6 +13,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
+import { Radio } from "lucide-react";
 
 const ensureHref = (h) => {
   if (!h) return "#";
@@ -25,9 +26,12 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Left: logo */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 flex-shrink-0 text-blue-600">
             <Link href="/" className="text-xl font-bold hover:text-blue-600">
-              MyLogo
+              <div className="flex items-center gap-1">
+                <Radio size={40} />
+                <h2>Beacon</h2>
+              </div>
             </Link>
           </div>
 
@@ -37,10 +41,10 @@ export default function Navbar() {
             <NavigationMenu>
               <NavigationMenuList>
                 {NAV_LINKS.map((item) =>
-                  item.children && item.children.length ? (
+                  item.children && item.children.length ? ( // If there are children, render a dropdown
                     <NavigationMenuItem key={item.title + (item.href || "")}>
                       {/* Trigger styled to be white on black, hover -> blue */}
-                      <NavigationMenuTrigger className="px-3 py-2 text-sm text-white rounded hover:bg-blue-600 hover:text-white">
+                      <NavigationMenuTrigger className="px-3 py-2 text-sm text-black rounded hover:bg-blue-600 hover:text-white">
                         {item.title}
                       </NavigationMenuTrigger>
 

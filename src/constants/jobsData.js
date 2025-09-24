@@ -18,7 +18,7 @@ export const jobs = [
     location: "Lagos",
     shortDesc: "Build responsive UIs with React, Next.js and TailwindCSS.",
     jobType: "Full-time",
-    pay: "From ₦300,000 / month",
+  pay: "300,000 / month",
     longDesc: {
       responsibilities: [
         "Implement responsive user interfaces using React and Next.js.",
@@ -46,7 +46,7 @@ export const jobs = [
     location: "Remote",
     shortDesc: "Design and build scalable server-side APIs with Node.js.",
     jobType: "Full-time",
-    pay: "From ₦350,000 / month",
+  pay: "350,000 / month",
     longDesc: {
       responsibilities: [
         "Build RESTful and GraphQL APIs using Node.js and Express.",
@@ -74,7 +74,7 @@ export const jobs = [
     location: "Lagos / Hybrid",
     shortDesc: "Work across frontend and backend to deliver end-to-end features.",
     jobType: "Full-time",
-    pay: "From ₦400,000 / month",
+  pay: "400,000 / month",
     longDesc: {
       responsibilities: [
         "Develop frontend features with React and backend services with Node.js.",
@@ -102,7 +102,7 @@ export const jobs = [
     location: "Lagos",
     shortDesc: "Design intuitive, accessible interfaces and prototypes.",
     jobType: "Full-time",
-    pay: "From ₦250,000 / month",
+  pay: "250,000 / month",
     longDesc: {
       responsibilities: [
         "Create wireframes, high-fidelity mockups and prototypes.",
@@ -130,7 +130,7 @@ export const jobs = [
     location: "Remote",
     shortDesc: "Manage cloud infrastructure, automation and reliability.",
     jobType: "Full-time",
-    pay: "From ₦450,000 / month",
+  pay: "450,000 / month",
     longDesc: {
       responsibilities: [
         "Design and operate scalable cloud infrastructure.",
@@ -158,7 +158,7 @@ export const jobs = [
     location: "Lagos / Remote",
     shortDesc: "Build cross-platform mobile apps using React Native.",
     jobType: "Full-time",
-    pay: "From ₦350,000 / month",
+  pay: "350,000 / month",
     longDesc: {
       responsibilities: [
         "Develop and maintain mobile applications with React Native.",
@@ -186,7 +186,7 @@ export const jobs = [
     location: "Lagos",
     shortDesc: "Ensure software quality with manual and automated testing.",
     jobType: "Full-time",
-    pay: "From ₦220,000 / month",
+  pay: "220,000 / month",
     longDesc: {
       responsibilities: [
         "Write and execute test plans and test cases.",
@@ -214,7 +214,7 @@ export const jobs = [
     location: "Remote",
     shortDesc: "Automate deployments and maintain CI/CD pipelines.",
     jobType: "Full-time",
-    pay: "From ₦400,000 / month",
+  pay: "400,000 / month",
     longDesc: {
       responsibilities: [
         "Build and maintain CI/CD pipelines and release processes.",
@@ -242,7 +242,7 @@ export const jobs = [
     location: "Lagos / Remote",
     shortDesc: "Turn data into insights and business decisions.",
     jobType: "Full-time",
-    pay: "From ₦300,000 / month",
+  pay: "300,000 / month",
     longDesc: {
       responsibilities: [
         "Collect, clean and analyze datasets.",
@@ -270,7 +270,7 @@ export const jobs = [
     location: "Remote",
     shortDesc: "Protect systems and networks from security threats.",
     jobType: "Full-time",
-    pay: "From ₦450,000 / month",
+  pay: "450,000 / month",
     longDesc: {
       responsibilities: [
         "Monitor networks and systems for vulnerabilities.",
@@ -300,7 +300,7 @@ export const jobs = [
     location: "Lagos",
     shortDesc: "Lead project delivery, timelines and cross-functional teams.",
     jobType: "Full-time",
-    pay: "From ₦300,000 / month",
+  pay: "300,000 / month",
     longDesc: {
       responsibilities: [
         "Plan and oversee project execution and delivery.",
@@ -328,7 +328,7 @@ export const jobs = [
     location: "Lagos",
     shortDesc: "Analyze business processes and translate needs to product teams.",
     jobType: "Full-time",
-    pay: "From ₦250,000 / month",
+  pay: "250,000 / month",
     longDesc: {
       responsibilities: [
         "Gather and document business requirements.",
@@ -356,7 +356,7 @@ export const jobs = [
     location: "Lagos",
     shortDesc: "Manage recruitment, policies and employee relations.",
     jobType: "Full-time",
-    pay: "From ₦220,000 / month",
+  pay: "220,000 / month",
     longDesc: {
       responsibilities: [
         "Lead recruitment and onboarding processes.",
@@ -384,7 +384,7 @@ export const jobs = [
     location: "Remote",
     shortDesc: "Drive marketing strategy, campaigns and brand growth.",
     jobType: "Full-time",
-    pay: "From ₦280,000 / month",
+  pay: "280,000 / month",
     longDesc: {
       responsibilities: [
         "Develop and execute marketing strategies.",
@@ -412,7 +412,7 @@ export const jobs = [
     location: "Lagos",
     shortDesc: "Oversee daily operations and improve processes.",
     jobType: "Full-time",
-    pay: "From ₦270,000 / month",
+  pay: "270,000 / month",
     longDesc: {
       responsibilities: [
         "Manage operational workflows and vendor relationships.",
@@ -440,7 +440,7 @@ export const jobs = [
     location: "Lagos",
     shortDesc: "Analyze financial data to support business decisions.",
     jobType: "Full-time",
-    pay: "From ₦300,000 / month",
+  pay: "300,000 / month",
     longDesc: {
       responsibilities: [
         "Prepare financial models and forecasts.",
@@ -496,7 +496,7 @@ export const jobs = [
     location: "Lagos",
     shortDesc: "Manage client success and long-term partnerships.",
     jobType: "Full-time",
-    pay: "From ₦200,000 / month",
+  pay: "200,000 / month",
     longDesc: {
       responsibilities: [
         "Onboard and support customers to achieve outcomes.",
@@ -524,7 +524,7 @@ export const jobs = [
     location: "Lagos / Hybrid",
     shortDesc: "Define product vision and lead cross-functional teams.",
     jobType: "Full-time",
-    pay: "From ₦400,000 / month",
+  pay: "400,000 / month",
     longDesc: {
       responsibilities: [
         "Define product roadmap and prioritize features.",
@@ -552,7 +552,7 @@ export const jobs = [
     location: "Lagos",
     shortDesc: "Provide administrative support to teams and executives.",
     jobType: "Full-time",
-    pay: "From ₦120,000 / month",
+  pay: "120,000 / month",
     longDesc: {
       responsibilities: [
         "Manage schedules, correspondence and filing.",
@@ -582,7 +582,7 @@ export const jobs = [
     location: "Remote",
     shortDesc: "Create visuals for web, social, and print.",
     jobType: "Full-time",
-    pay: "From ₦180,000 / month",
+  pay: "180,000 / month",
     longDesc: {
       responsibilities: [
         "Design marketing assets, logos and UI elements.",
@@ -610,7 +610,7 @@ export const jobs = [
     location: "Lagos / Remote",
     shortDesc: "Write blog posts, marketing copy, and product content.",
     jobType: "Full-time",
-    pay: "From ₦150,000 / month",
+    pay: "From 150,000 / month",
     longDesc: {
       responsibilities: [
         "Produce SEO-friendly articles and marketing copy.",
@@ -638,7 +638,7 @@ export const jobs = [
     location: "Lagos",
     shortDesc: "Write persuasive marketing copy and ad headlines.",
     jobType: "Full-time",
-    pay: "From ₦160,000 / month",
+    pay: "From 160,000 / month",
     longDesc: {
       responsibilities: [
         "Craft compelling ad copy and landing page content.",
@@ -666,7 +666,7 @@ export const jobs = [
     location: "Remote",
     shortDesc: "Edit promotional and social videos with creative flair.",
     jobType: "Contract",
-    pay: "From ₦120,000 / month (contract)",
+    pay: "From 120,000 / month (contract)",
     longDesc: {
       responsibilities: [
         "Edit footage into polished videos for social and web.",
@@ -694,7 +694,7 @@ export const jobs = [
     location: "Lagos",
     shortDesc: "Plan and run social campaigns to grow brand presence.",
     jobType: "Full-time",
-    pay: "From ₦180,000 / month",
+    pay: "From 180,000 / month",
     longDesc: {
       responsibilities: [
         "Develop content calendars and run campaigns.",
@@ -778,7 +778,7 @@ export const jobs = [
     location: "Lagos",
     shortDesc: "Define brand positioning and communication strategies.",
     jobType: "Full-time",
-    pay: "From ₦320,000 / month",
+    pay: "From 320,000 / month",
     longDesc: {
       responsibilities: [
         "Develop brand strategies and messaging frameworks.",
@@ -834,7 +834,7 @@ export const jobs = [
     location: "Lagos",
     shortDesc: "Manage public image, media relations and PR campaigns.",
     jobType: "Full-time",
-    pay: "From ₦200,000 / month",
+    pay: "From 200,000 / month",
     longDesc: {
       responsibilities: [
         "Develop PR strategies and press materials.",
@@ -864,7 +864,7 @@ export const jobs = [
     location: "Lagos",
     shortDesc: "Provide patient care and support clinical operations.",
     jobType: "Full-time",
-    pay: "From ₦200,000 / month",
+    pay: "From 200,000 / month",
     longDesc: {
       responsibilities: [
         "Deliver direct patient care and monitor health status.",
@@ -892,7 +892,7 @@ export const jobs = [
     location: "Lagos",
     shortDesc: "Perform lab tests and ensure result accuracy.",
     jobType: "Full-time",
-    pay: "From ₦220,000 / month",
+    pay: "From 220,000 / month",
     longDesc: {
       responsibilities: [
         "Run laboratory tests and analyze results.",
@@ -920,7 +920,7 @@ export const jobs = [
     location: "Lagos",
     shortDesc: "Dispense medications and advise patients on drug use.",
     jobType: "Full-time",
-    pay: "From ₦240,000 / month",
+    pay: "From 240,000 / month",
     longDesc: {
       responsibilities: [
         "Dispense prescription medications accurately.",
@@ -948,7 +948,7 @@ export const jobs = [
     location: "Lagos",
     shortDesc: "Provide primary care and clinical assessments.",
     jobType: "Full-time",
-    pay: "From ₦600,000 / month",
+    pay: "From 600,000 / month",
     longDesc: {
       responsibilities: [
         "Perform clinical examinations and diagnose conditions.",
@@ -976,7 +976,7 @@ export const jobs = [
     location: "Lagos",
     shortDesc: "Teach and care for primary-school learners.",
     jobType: "Full-time",
-    pay: "From ₦120,000 / month",
+    pay: "From 120,000 / month",
     longDesc: {
       responsibilities: [
         "Plan and deliver lessons according to curriculum.",
@@ -1004,7 +1004,7 @@ export const jobs = [
     location: "Lagos",
     shortDesc: "Deliver lectures and support research in your field.",
     jobType: "Full-time",
-    pay: "From ₦350,000 / month",
+    pay: "From 350,000 / month",
     longDesc: {
       responsibilities: [
         "Teach undergraduate and postgraduate courses.",
@@ -1060,7 +1060,7 @@ export const jobs = [
     location: "Lagos",
     shortDesc: "Oversee school operations and administration.",
     jobType: "Full-time",
-    pay: "From ₦220,000 / month",
+    pay: "From 220,000 / month",
     longDesc: {
       responsibilities: [
         "Manage admissions, staff, and school logistics.",
@@ -1088,7 +1088,7 @@ export const jobs = [
     location: "Lagos",
     shortDesc: "Provide counselling and mental health support services.",
     jobType: "Full-time",
-    pay: "From ₦200,000 / month",
+    pay: "From 200,000 / month",
     longDesc: {
       responsibilities: [
         "Conduct assessments and provide counselling.",
@@ -1116,7 +1116,7 @@ export const jobs = [
     location: "Lagos",
     shortDesc: "Provide physical rehabilitation and therapy services.",
     jobType: "Full-time",
-    pay: "From ₦190,000 / month",
+    pay: "From 190,000 / month",
     longDesc: {
       responsibilities: [
         "Assess patients' physical conditions and plan therapy.",
@@ -1146,7 +1146,7 @@ export const jobs = [
     location: "Lagos",
     shortDesc: "Install and maintain electrical systems for residential and commercial sites.",
     jobType: "Full-time",
-    pay: "From ₦120,000 / month",
+    pay: "From 120,000 / month",
     longDesc: {
       responsibilities: [
         "Install wiring, outlets and lighting systems.",
@@ -1174,7 +1174,7 @@ export const jobs = [
     location: "Lagos",
     shortDesc: "Install and repair plumbing systems in residential and commercial buildings.",
     jobType: "Full-time",
-    pay: "From ₦110,000 / month",
+    pay: "From 110,000 / month",
     longDesc: {
       responsibilities: [
         "Install and repair pipes, fixtures and water systems.",
@@ -1202,7 +1202,7 @@ export const jobs = [
     location: "Lagos",
     shortDesc: "Construct and fit wooden structures and furniture.",
     jobType: "Full-time",
-    pay: "From ₦100,000 / month",
+    pay: "From 100,000 / month",
     longDesc: {
       responsibilities: [
         "Measure, cut, assemble and install wood components.",
@@ -1230,7 +1230,7 @@ export const jobs = [
     location: "Lagos",
     shortDesc: "Diagnose and repair vehicles for performance and safety.",
     jobType: "Full-time",
-    pay: "From ₦140,000 / month",
+    pay: "From 140,000 / month",
     longDesc: {
       responsibilities: [
         "Inspect and diagnose vehicle systems.",
@@ -1258,7 +1258,7 @@ export const jobs = [
     location: "Lagos",
     shortDesc: "Perform welding tasks for fabrication and repair projects.",
     jobType: "Full-time",
-    pay: "From ₦100,000 / month",
+    pay: "From 100,000 / month",
     longDesc: {
       responsibilities: [
         "Weld and fabricate metal structures.",
@@ -1286,7 +1286,7 @@ export const jobs = [
     location: "Lagos",
     shortDesc: "Transport goods and ensure timely deliveries across routes.",
     jobType: "Full-time",
-    pay: "From ₦90,000 / month",
+    pay: "From 90,000 / month",
     longDesc: {
       responsibilities: [
         "Deliver goods safely and on schedule.",
@@ -1314,7 +1314,7 @@ export const jobs = [
     location: "Lagos",
     shortDesc: "Prepare meals, manage kitchen tasks and ensure food quality.",
     jobType: "Full-time",
-    pay: "From ₦120,000 / month",
+    pay: "From 120,000 / month",
     longDesc: {
       responsibilities: [
         "Prepare dishes according to menu and quality standards.",
@@ -1342,7 +1342,7 @@ export const jobs = [
     location: "Lagos",
     shortDesc: "Protect property, staff and assets through patrol and monitoring.",
     jobType: "Full-time",
-    pay: "From ₦70,000 / month",
+    pay: "From 70,000 / month",
     longDesc: {
       responsibilities: [
         "Monitor premises and perform security patrols.",
@@ -1370,7 +1370,7 @@ export const jobs = [
     location: "Lagos",
     shortDesc: "Design and tailor clothing to specifications.",
     jobType: "Full-time",
-    pay: "From ₦80,000 / month",
+    pay: "From 80,000 / month",
     longDesc: {
       responsibilities: [
         "Cut, sew and finish clothing to client specifications.",
@@ -1398,7 +1398,7 @@ export const jobs = [
     location: "Lagos",
     shortDesc: "Maintain cleanliness and sanitation of office or facility spaces.",
     jobType: "Full-time",
-    pay: "From ₦50,000 / month",
+    pay: "From 50,000 / month",
     longDesc: {
       responsibilities: [
         "Perform cleaning tasks across assigned areas.",

@@ -27,7 +27,7 @@ const features = [
 
 export default function WhyUseBeacon() {
   return (
-    <section className="relative py-20 px-6 bg-[#0a0f1a] overflow-hidden">
+    <section className="relative py-20 px-6 bg-black overflow-hidden">
       {/* Title */}
       <h2 className="text-3xl md:text-5xl font-bold text-white text-center mb-14">
         Why Choose <span className="text-[#1E90FF]">Beacon</span>?
