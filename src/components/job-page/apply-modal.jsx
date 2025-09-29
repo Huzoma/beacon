@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import React, { useState } from "react";
-import Button from "@/components/ui/Button";
+import React, { useState } from 'react';
+import Button from '@/components/ui/Button';
 import {
   Dialog,
   DialogContent,
@@ -10,16 +10,16 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog";
-import { Label } from "@/components/ui/label";
-import { Input } from "@/components/ui/Input";
-import { Textarea } from "@/components/ui/textarea";
+} from '@/components/ui/dialog';
+import { Label } from '@/components/ui/label';
+import { Input } from '@/components/ui/Input';
+import { Textarea } from '@/components/ui/textarea';
 
 export default function ApplyModal({ jobTitle }) {
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    coverLetter: "",
+    name: '',
+    email: '',
+    coverLetter: '',
   });
 
   const handleChange = (e) => {
@@ -32,7 +32,7 @@ export default function ApplyModal({ jobTitle }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Application Submitted for:", jobTitle, "with data:", formData);
+    console.log('Application Submitted for:', jobTitle, 'with data:', formData);
     // In a real application, you would send this data to an API
     // Note: Do not use alert() as it's not a great user experience.
     // You could replace this with a toast or a message in the UI.
@@ -52,7 +52,30 @@ export default function ApplyModal({ jobTitle }) {
             Fill in your details and submit your application.
           </DialogDescription>
         </DialogHeader>
-        <form onSubmit={handleSubmit} className="grid gap-4 py-4">
+        {/*
+          Updated to use FormSubmit.io for direct email submissions.
+          The form action is set to FormSubmit's endpoint with your email.
+          No JS handler is needed; FormSubmit will send the data to your email.
+        */}
+        <form
+          action="https://formsubmit.co/7729c3753c7bd8b1cd9a0c57959eede7"
+          method="POST"
+          className="grid gap-4 py-4"
+        >
+          {/* FormSubmit.io spam protection: hidden honeypot field */}
+          <input
+            type="text"
+            name="_formsubmit_honeypot"
+            style={{ display: 'none' }}
+            tabIndex="-1"
+            autoComplete="off"
+          />
+          {/* Custom confirmation message after submit */}
+          <input
+            type="hidden"
+            name="_confirmation"
+            value="Thank you for applying! Your application has been received."
+          />
           <div className="grid grid-cols-4 items-center gap-4">
             <Label htmlFor="name" className="text-right">
               Name:
