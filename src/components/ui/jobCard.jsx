@@ -22,28 +22,31 @@ function JobCard({ job }) {
       aria-label={`View details for ${job.title}`}
     >
       <Card
-        className="bg-white/5 
+        className="h-full bg-white/5 
                    border border-[#1E90FF]/20 backdrop-blur-xl
                    hover:shadow-lg hover:shadow-[#1E90FF]/40 transition-all duration-300 ease-in-out
-                   hover:scale-102 cursor-pointer"
+                   hover:scale-102 cursor-pointer flex flex-col"
       >
-        <CardHeader>
-          <CardTitle className="text-xl text-white font-bold">{job.title}</CardTitle>
-          <div className="flex space-x-2 text-gray-400 text-sm">
-            <span>{job.location}</span>
-            <span>•</span>
-            <span>{job.jobType}</span>
-          </div>
-        </CardHeader>
-        <CardContent className="text-gray-300">
-          <p>{job.shortDesc}</p>
-          {job.pay && (
-            <div className="flex items-center gap-2 mt-4 text-blue-400 font-semibold text-lg">
-              <DollarSign className="w-5 h-5" />
-              <span>{job.pay}</span>
+        <div className="flex-grow p-6">
+          <CardHeader>
+            <CardTitle className="text-xl text-white font-bold">{job.title}</CardTitle>
+            <div className="flex space-x-2 text-gray-400 text-sm">
+              <span>{job.location}</span>
+              <span>•</span>
+              <span>{job.jobType}</span>
             </div>
-          )}
-        </CardContent>
+          </CardHeader>
+          <CardContent className="text-gray-300">
+            <p>{job.shortDesc}</p>
+            {job.pay && (
+              <div className="flex items-center gap-2 mt-4 text-blue-400 font-semibold text-lg">
+                <DollarSign className="w-5 h-5" />
+                <span>{job.pay}</span>
+              </div>
+            )}
+          </CardContent>
+        </div>
+
         <div className="p-6 pt-0">
           <Button>View Details</Button>
         </div>

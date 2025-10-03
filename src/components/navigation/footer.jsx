@@ -10,11 +10,11 @@ export default function Footer() {
   const year = new Date().getFullYear(); // used to get the current year
   return (
     <footer className="bg-black space-y-4 py-4 text-amber-50 font-bold text-center ">
-      <div className="max-w-[1400px] mx-auto flex flex-col space-y-8">
+      <div className="max-w-[1400px] px-4 sm:px-6 lg:px-8 mx-auto flex flex-col space-y-8">
         {/* Main Content: Subscribe and Links */}
         <div className="flex flex-col lg:flex-row space-y-8 lg:space-y-0 lg:space-x-8">
           {/* Subscribe Section */}
-          <div className="w-full lg:w-1/2 py-20 px-6">
+          <div className="w-full lg:w-1/2 px-6">
             <Card className="mx-auto p-8 bg-white/5 border border-[#1E90FF]/20 text-white text-left">
               <CardHeader className="text-2xl">Subscribe</CardHeader>
               <CardContent className="font-normal text-gray-300">

@@ -62,7 +62,7 @@ export default function JobsPage() {
         {/* Job Listings: Render the list of jobs for the current page. If there are jobs, map over currentJobs and render a JobCard for each. If not, show a 'no jobs found' message. */}
         <main className="p-8">
           <h2 className="text-center text-3xl font-bold mb-8">Job Listings</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {currentJobs.length > 0 ? (
               // For each job in currentJobs, render a JobCard component
               currentJobs.map((job) => <JobCard key={job.id} job={job} />)

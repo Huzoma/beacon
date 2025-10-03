@@ -5,18 +5,13 @@ export const footerLinks = [
   {
     title: 'COMPANY',
     links: [
-      { text: 'About', url: '#' },
-      { text: 'Our Team', url: '#' },
-      { text: 'Jobs', url: '#' },
+      { text: 'About', url: '/about' },
+      { text: 'Jobs', url: '/jobs' },
     ],
   },
   {
     title: 'RESOURCES',
-    links: [
-      { text: 'News', url: '#' },
-      { text: 'FAQs', url: '#' },
-      { text: 'Candidates', url: '#' },
-    ],
+    links: [{ text: 'FAQs', url: '#' }],
   },
   {
     title: 'CONTACTS',

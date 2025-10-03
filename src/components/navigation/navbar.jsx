@@ -26,7 +26,7 @@ export default function Navbar() {
     // Header section with black background, white text, and shadow
     <header className="bg-black text-white shadow-sm">
       {/* Container for max width and horizontal padding */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Flex container for logo and navigation, vertically centered, spaced apart */}
         <div className="flex items-center justify-between h-16">
           {/* Left: logo section */}
