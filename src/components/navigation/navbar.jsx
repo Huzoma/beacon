@@ -2,7 +2,6 @@
 import MaxWidthContainer from '@/components/shared/max-width-container';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
-import { cn } from '@/lib/utils';
 import { NAV_LINKS } from '@/constants/navLinks';
 import { useState } from 'react';
 import {

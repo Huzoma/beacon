@@ -62,7 +62,7 @@ export default function ApplyModal({ jobTitle }) {
           method="POST"
           className="grid gap-4 py-4"
         >
-          {/* FormSubmit.io spam protection: hidden honeypot field */}
+          {/* FormSubmit.co spam protection: hidden honeypot field */}
           <input
             type="text"
             name="_formsubmit_honeypot"

@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import MaxWidthContainer from '@/components/shared/max-width-container';
 import Link from 'next/link';
 import { ChevronRight, ClipboardList, Bookmark, CheckCircle } from 'lucide-react';
 import {
@@ -16,7 +17,7 @@ import { mockAppliedJobs, mockSavedJobs, dashboardSummary } from '@/constants/da
 export default function DashboardPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#0a0f1a] to-black text-white p-4 sm:p-6 md:p-12 lg:p-16 font-sans">
-      <div className="max-w-7xl mx-auto">
+      <MaxWidthContainer>
         {/* Dashboard Header */}
         <header className="text-center mb-8 sm:mb-12">
           <h1 className="text-3xl sm:text-4xl lg:text-6xl font-extrabold bg-clip-text bg-gradient-to-r text-white leading-tight">
@@ -161,7 +162,7 @@ export default function DashboardPage() {
             ))}
           </div>
         </section>
-      </div>
+      </MaxWidthContainer>
     </div>
   );
 }

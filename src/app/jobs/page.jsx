@@ -1,38 +1,35 @@
-"use client";
+'use client';
 
-import React, { useState } from "react";
-import MaxWidthContainer from "@/components/shared/max-width-container";
-import SearchBar from "@/components/search-bar/page";
-import CategoryButtons from "@/components/search-bar/categoryButtons";
-import JobCard from "@/components/ui/jobCard";
-import { jobs } from "@/constants/jobsData";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import React, { useState } from 'react';
+import SearchBar from '@/components/search-bar/page';
+import CategoryButtons from '@/components/search-bar/categoryButtons';
+import JobCard from '@/components/ui/jobCard';
+import { jobs } from '@/constants/jobsData';
+import { ArrowLeft, ArrowRight } from 'lucide-react';
+import MaxWidthContainer from '@/components/shared/max-width-container';
 
 const ITEMS_PER_PAGE = 10;
 
 export default function JobsPage() {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [activeCategory, setActiveCategory] = useState("All");
+  const [searchTerm, setSearchTerm] = useState('');
+  const [activeCategory, setActiveCategory] = useState('All');
   const [currentPage, setCurrentPage] = useState(1);
 
   const handleSearch = (term) => {
     setSearchTerm(term);
-    setActiveCategory("All"); // Reset category filter when searching
+    setActiveCategory('All'); // Reset category filter when searching
     setCurrentPage(1); // Reset to the first page on new search
   };
 
   const handleCategoryChange = (category) => {
     setActiveCategory(category);
-    setSearchTerm(""); // Clear search term when a category is selected
+    setSearchTerm(''); // Clear search term when a category is selected
     setCurrentPage(1); // Reset to the first page on new category change
   };
 
   const filteredJobs = jobs.filter((job) => {
-    const matchesCategory =
-      activeCategory === "All" || job.category === activeCategory; // checks if job belongs to activeCategory or if "All" is selected
-    const matchesSearch = job.title
-      .toLowerCase()
-      .includes(searchTerm.toLowerCase()); // checks if job title matches searchTerm (case insensitive)
+    const matchesCategory = activeCategory === 'All' || job.category === activeCategory; // checks if job belongs to activeCategory or if "All" is selected
+    const matchesSearch = job.title.toLowerCase().includes(searchTerm.toLowerCase()); // checks if job title matches searchTerm (case insensitive)
     return matchesCategory && matchesSearch; // include job only if it matches both criteria
   });
 
@@ -50,8 +47,8 @@ export default function JobsPage() {
             Find your next opportunity
           </h1>
           <p className="mt-4 text-lg text-gray-400 max-w-2xl">
-            Type a few keywords into the search field, jump to a category, or
-            use our filters to find your perfect match.
+            Type a few keywords into the search field, jump to a category, or use our filters to
+            find your perfect match.
           </p>
           <div className="w-full mt-8 flex flex-col items-center">
             <SearchBar onSearch={handleSearch} />
@@ -94,8 +91,8 @@ export default function JobsPage() {
                     onClick={() => setCurrentPage(i + 1)}
                     className={`h-10 w-10 rounded-full flex items-center justify-center ${
                       i + 1 === currentPage
-                        ? "bg-blue-600 text-white shadow-lg"
-                        : "bg-gray-700 text-gray-400 hover:bg-gray-600 transition-colors duration-200"
+                        ? 'bg-blue-600 text-white shadow-lg'
+                        : 'bg-gray-700 text-gray-400 hover:bg-gray-600 transition-colors duration-200'
                     }`}
                   >
                     {i + 1}
@@ -103,9 +100,7 @@ export default function JobsPage() {
                 ))}
               </div>
               <button
-                onClick={() =>
-                  setCurrentPage((prev) => Math.min(totalPages, prev + 1))
-                }
+                onClick={() => setCurrentPage((prev) => Math.min(totalPages, prev + 1))}
                 disabled={currentPage === totalPages}
                 className="px-6 py-2 rounded-full disabled:opacity-50 transition-colors duration-200 bg-[#1E90FF]/20 border border-[#1E90FF]/40 text-[#1E90FF] font-semibold backdrop-blur-md hover:bg-[#1E90FF]/30"
               >
