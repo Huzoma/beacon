@@ -3,8 +3,6 @@ import Link from 'next/link';
 import { Card, CardContent, CardHeader } from '../ui/Card';
 import FooterColumn from './footerColumn';
 import { footerLinks } from '@/constants/footerLinks';
-import { socialLinks } from '@/constants/socialLinks';
-import { Radio } from 'lucide-react';
 
 export default function Footer() {
   const year = new Date().getFullYear(); // used to get the current year
@@ -52,21 +50,6 @@ export default function Footer() {
                 <h1 className="text-2xl">Beacon</h1>
               </div>
             </Link>
-          </div>
-          {/* Social Links Section */}
-          <div className="flex justify-center space-x-6 my-8">
-            {socialLinks.map((link, index) => (
-              <a
-                key={index}
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={link.name}
-                className="text-gray-400 hover:text-[#1E90FF] transition-colors duration-200"
-              >
-                <link.Icon className="w-6 h-6" />
-              </a>
-            ))}
           </div>
         </div>
       </div>

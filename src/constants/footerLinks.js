@@ -1,5 +1,3 @@
-import { socialLinks } from './socialLinks';
-
 // data/footerData.js
 export const footerLinks = [
   {
@@ -10,16 +8,7 @@ export const footerLinks = [
     ],
   },
   {
-    title: 'RESOURCES',
-    links: [{ text: 'FAQs', url: '#' }],
-  },
-  {
     title: 'CONTACTS',
-    links: [
-      { text: 'CV Post', url: '#' },
-      { text: 'Job Post', url: '#' },
-      { text: 'Contact Us', url: '#' },
-    ],
-    socials: socialLinks,
+    links: [{ text: 'Contact Us', url: '/contact' }],
   },
 ];
