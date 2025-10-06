@@ -1,23 +1,24 @@
-'use client';
-
-import React, { useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import { jobs } from '@/constants/jobsData';
+import { slugify } from '@/lib/utils';
 import JobCard from '@/components/ui/jobCard';
-import { useParams } from 'next/navigation';
 import ApplyModal from '@/components/job-page/apply-modal';
 import MaxWidthContainer from '@/components/shared/max-width-container';
 
+export async function generateStaticParams() {
+  // Pre-render pages for all jobs using slug if available, otherwise a slugified title
+  return jobs.map((job) => ({ slug: String(job.slug ?? slugify(job.title) ?? job.id) }));
+}
+
 export default function JobDetailsPage({ params }) {
-  // Correctly unwrap the entire params Promise first
-  const resolvedParams = React.use(params);
+  const { slug } = params;
 
-  // Then access the 'id' property from the resolved object
-  const { id } = resolvedParams;
-
-  const job = jobs.find((job) => job.id === parseInt(id));
-
-  // const [isDialogOpen, setIsDialogOpen] = useState(false);
+  // Try to find by slug first, then by slugified title, then numeric id fallback
+  const job =
+    jobs.find((j) => String(j.slug) === String(slug)) ||
+    jobs.find((j) => slugify(j.title) === String(slug)) ||
+    jobs.find((j) => String(j.id) === String(slug));
 
   if (!job) {
     return <div className="p-8 text-center text-white">Job not found.</div>;

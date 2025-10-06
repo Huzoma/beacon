@@ -6,6 +6,7 @@ import React from 'react';
 import PropTypes from './propTypes';
 import { DollarSign } from 'lucide-react';
 import Link from 'next/link';
+import { slugify } from '@/lib/utils';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import Button from './Button';
 function JobCard({ job }) {
@@ -16,7 +17,7 @@ function JobCard({ job }) {
 
   return (
     <Link
-      href={`/jobs/${job.id}`}
+      href={`/jobs/${job.slug ?? slugify(job.title) ?? job.id}`}
       // Accessibility: Make the card act as a button for screen readers
       role="button"
       aria-label={`View details for ${job.title}`}
