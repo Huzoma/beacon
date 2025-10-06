@@ -22,12 +22,22 @@ export default function ApplyModal({ jobTitle }) {
     coverLetter: '',
   });
 
+  // new state to show selected resume filename
+  const [resumeName, setResumeName] = useState(null);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,
     }));
+  };
+
+  // handle file selection UI only (form will submit file via multipart)
+  const handleFileChange = (e) => {
+    const file = e.target.files?.[0];
+    setResumeName(file ? file.name : null);
+    // do not store the file in form state (we submit via native form POST)
   };
 
   const handleSubmit = (e) => {
@@ -45,7 +55,7 @@ export default function ApplyModal({ jobTitle }) {
           Apply Now
         </Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px] bg-white/5 border border-blue-400/20 backdrop-blur-xl p-6 rounded-lg shadow-md text-white">
+      <DialogContent className="sm:max-w-3xl bg-white/5 border border-blue-400/20 backdrop-blur-xl p-6 rounded-lg shadow-md text-white">
         <DialogHeader>
           <DialogTitle>Apply for {jobTitle}</DialogTitle>
           <DialogDescription className="text-gray-400">
@@ -60,6 +70,7 @@ export default function ApplyModal({ jobTitle }) {
         <form
           action="https://formsubmit.co/7729c3753c7bd8b1cd9a0c57959eede7"
           method="POST"
+          encType="multipart/form-data"
           className="grid gap-4 py-4"
         >
           {/* FormSubmit.co spam protection: hidden honeypot field */}
@@ -112,23 +123,41 @@ export default function ApplyModal({ jobTitle }) {
               name="coverLetter"
               value={formData.coverLetter}
               onChange={handleChange}
-              className="col-span-3 bg-white/10 text-white border-gray-600 focus:ring-blue-500 min-h-[150px]"
+              className="col-span-3 bg-white/10 text-white border-gray-600 focus:ring-blue-500 min-h-[200px]"
               placeholder="Tell us about yourself and why you're a good fit for this role."
               required
             />
           </div>
+
+          {/* Resume / CV upload (optional) */}
+          <div className="grid grid-cols-4 items-center gap-4">
+            <Label htmlFor="resume" className="text-right">
+              Attach CV:
+            </Label>
+            <div className="col-span-3">
+              <input
+                id="resume"
+                name="resume"
+                type="file"
+                accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                onChange={handleFileChange}
+                className="w-full text-sm text-white file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-white file:text-black"
+              />
+              {resumeName && <p className="mt-2 text-xs text-gray-300">Selected: {resumeName}</p>}
+            </div>
+          </div>
+
           <DialogFooter className="mt-4">
-            <Button
+            <button
               type="submit"
               className="w-full px-8 py-3 rounded-xl bg-[#1E90FF]/20 border border-[#1E90FF]/40
               text-[#1E90FF] font-semibold backdrop-blur-md
               hover:bg-[#1E90FF]/30
-              transition-all duration-300 ease-in-out
-              hover:scale-101
+              transition-colors duration-200 ease-in-out
               focus:outline-none"
             >
               Submit Application
-            </Button>
+            </button>
           </DialogFooter>
         </form>
       </DialogContent>
