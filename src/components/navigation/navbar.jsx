@@ -117,7 +117,7 @@ export default function Navbar() {
         }`}
       >
         <div className="flex items-center justify-between mb-8">
-          <span className="text-xl font-bold text-[#1E90FF]">Job Board</span>
+          <span className="text-xl font-bold text-[#1E90FF]">Beacon</span>
           <button
             onClick={() => setShowMenu(false)}
             className="text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#1E90FF]"

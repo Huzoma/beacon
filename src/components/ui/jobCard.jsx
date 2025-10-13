@@ -4,7 +4,6 @@
 import React from 'react';
 // Import PropTypes for runtime type checking
 import PropTypes from './propTypes';
-import { DollarSign } from 'lucide-react';
 import Link from 'next/link';
 import { slugify } from '@/lib/utils';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
@@ -41,7 +40,6 @@ function JobCard({ job }) {
             <p>{job.shortDesc}</p>
             {job.pay && (
               <div className="flex items-center gap-2 mt-4 text-blue-400 font-semibold text-lg">
-                <DollarSign className="w-5 h-5" />
                 <span>{job.pay}</span>
               </div>
             )}
