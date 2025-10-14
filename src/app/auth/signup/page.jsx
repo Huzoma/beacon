@@ -23,7 +23,7 @@ export default function ComingSoon({ pageName = 'this feature' }) {
 
         <p className="text-gray-500 mb-12 max-w-md mx-auto">
           We're working hard to bring you this new feature with the quality and reliability you
-          expect from **Beacon**. Check back in soon!
+          expect from Beacon. Check back in soon!
         </p>
 
         {/* Action Button */}
