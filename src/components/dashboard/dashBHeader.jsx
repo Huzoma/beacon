@@ -1,21 +1,5 @@
-import {
-  Menu,
-  X,
-  Search,
-  Bell,
-  User,
-  Settings,
-  BarChart3,
-  TrendingUp,
-  DollarSign,
-  Clock,
-  LayoutDashboard,
-  LogOut,
-  Briefcase,
-  Calendar,
-  Award,
-  Mail,
-} from 'lucide-react';
+import { Menu, Search, Bell, User } from 'lucide-react';
+
 /**
  * 2. DashboardHeader Component
  * Contains search bar, user profile, and notifications
@@ -34,7 +18,7 @@ const DashboardHeader = ({ toggleSidebar }) => (
   <header className="flex items-center justify-between p-4 border-b border-[#1E90FF]/20 bg-[#0a0f1a]/80 backdrop-blur-sm">
     <div className="flex items-center space-x-4">
       <IconButton icon={Menu} onClick={toggleSidebar} className="md:hidden" />
-      <h2 className="text-2xl font-bold text-white hidden md:block">Job Seeker Dashboard</h2>
+      <h2 className="text-2xl font-bold text-white hidden md:block">Beacon Dashboard</h2>
     </div>
 
     <div className="flex items-center space-x-4">
@@ -47,7 +31,7 @@ const DashboardHeader = ({ toggleSidebar }) => (
         />
       </div>
       <IconButton icon={Bell} onClick={() => alert('Notifications clicked')} />
-      <IconButton icon={User} onClick={() => alert('User profile clicked')} />
+      <IconButton icon={User} href="/profile/jobseeker" className="" />
     </div>
   </header>
 );

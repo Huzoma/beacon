@@ -1,46 +1,97 @@
 'use client';
-import React from 'react';
-import Link from 'next/link';
-import { Rocket, Clock, Zap } from 'lucide-react';
+
+import React, { createContext, useContext, useState, useEffect } from 'react';
+
+// 1. Create the Auth Context
+const AuthContext = createContext(null);
 
 /**
- * ComingSoon Component
- * A stylish and responsive placeholder page for undeveloped routes on the Beacon site.
+ * AuthProvider Component
+ * This component will wrap your application and provide authentication state
+ * and functions to all descendant components.
+ * @param {object} props - The component props.
+ * @param {React.ReactNode} props.children - The child components to be rendered.
  */
-export default function ComingSoon({ pageName = 'this feature' }) {
-  return (
-    <div className="min-h-[calc(100vh-120px)] flex flex-col items-center justify-center bg-black text-white px-4 py-20">
-      <div className="max-w-xl text-center p-8 sm:p-12 rounded-3xl bg-white/5 border border-[#1E90FF]/20 backdrop-blur-md shadow-2xl shadow-blue-900/40">
-        {/* Icon and Title */}
-        <Rocket className="w-16 h-16 sm:w-20 sm:h-20 text-[#1E90FF] mx-auto mb-6 animate-bounce-slow" />
+export const AuthProvider = ({ children }) => {
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true); // To handle initial auth state check
 
-        <h1 className="text-3xl sm:text-5xl font-extrabold mb-4 tracking-tight">Launching Soon!</h1>
+  // Mock checking for a user session on component mount (e.g., from localStorage or a cookie)
+  useEffect(() => {
+    // In a real app, you would verify a token with your backend here
+    const checkUserSession = () => {
+      console.log('Checking for active session...');
+      // For demonstration, we'll assume no user is logged in initially.
+      // You could replace this with:
+      // const storedUser = localStorage.getItem('user');
+      // if (storedUser) {
+      //   setUser(JSON.parse(storedUser));
+      // }
+      setLoading(false);
+    };
 
-        <p className="text-xl text-gray-400 mb-8">
-          The <span className="text-[#1E90FF] font-semibold">{pageName}</span> page is currently
-          under development.
-        </p>
+    checkUserSession();
+  }, []);
 
-        <p className="text-gray-500 mb-12 max-w-md mx-auto">
-          We're working hard to bring you this new feature with the quality and reliability you
-          expect from **Beacon**. Check back in soon!
-        </p>
+  // --- Authentication Functions ---
 
-        {/* Action Button */}
-        <Link
-          href="/"
-          className="inline-flex items-center justify-center px-10 py-3 rounded-full bg-[#1E90FF] text-black font-semibold hover:bg-blue-400 transition-colors duration-300 shadow-lg shadow-blue-500/40 transform hover:scale-[1.02]"
-        >
-          <Zap className="h-5 w-5 mr-2" />
-          Go to Homepage
-        </Link>
-      </div>
+  /**
+   * Logs in a user.
+   * In a real-world scenario, this would involve an API call.
+   * @param {object} userData - The user's data after successful login.
+   */
+  const login = (userData) => {
+    console.log('Logging in user:', userData);
+    setUser(userData);
+    // You might want to save user data or token to localStorage here
+    // localStorage.setItem('user', JSON.stringify(userData));
+  };
 
-      {/* Footer Element */}
-      <div className="mt-12 flex items-center text-gray-600 text-sm">
-        <Clock className="w-4 h-4 mr-2" />
-        Thank you for your patience as we build the future of job hunting.
-      </div>
-    </div>
-  );
-}
+  /**
+   * Logs out the current user.
+   */
+  const logout = () => {
+    console.log('Logging out user');
+    setUser(null);
+    // Clear any stored session data
+    // localStorage.removeItem('user');
+  };
+
+  /**
+   * Registers a new user.
+   * @param {object} registrationData - The data for the new user.
+   */
+  const signup = (registrationData) => {
+    // Here you would make an API call to your backend to register the user
+    console.log('Signing up user with:', registrationData);
+    // After successful registration, you might automatically log them in
+    // For now, we'll just log it.
+    const newUser = { id: Date.now(), ...registrationData };
+    login(newUser);
+  };
+
+  // The value provided to consuming components
+  const value = {
+    user,
+    isAuthenticated: !!user,
+    loading,
+    login,
+    logout,
+    signup,
+  };
+
+  return <AuthContext.Provider value={value}>{!loading && children}</AuthContext.Provider>;
+};
+
+/**
+ * useAuth Custom Hook
+ * A convenient way for components to access the authentication context.
+ * @returns {object} The authentication context value.
+ */
+export const useAuth = () => {
+  const context = useContext(AuthContext);
+  if (context === undefined) {
+    throw new Error('useAuth must be used within an AuthProvider');
+  }
+  return context;
+};

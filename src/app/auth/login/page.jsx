@@ -1,5 +1,6 @@
 'use client';
 import React, { useState } from 'react';
+import Link from 'next/link';
 // We now only import standard components and Lucide icons
 import { AlertTriangle, Loader2, Mail, Lock, LogIn, Chrome, Facebook } from 'lucide-react';
 
@@ -155,12 +156,10 @@ function LoginPage() {
               features and tools.
             </p>
             <div className="mt-8 flex justify-center">
-              <CustomButton
-                variant="outline"
-                className="w-auto px-6"
-                onClick={() => alert('Redirecting to password reset...')}
-              >
-                Forgot Password?
+              <CustomButton variant="outline" className="w-auto px-6">
+                <Link href="/auth/forgot-password" className="block">
+                  Forgot Password?
+                </Link>
               </CustomButton>
             </div>
           </div>
@@ -223,13 +222,12 @@ function LoginPage() {
 
               {/* Forgot Password Link */}
               <div className="text-right text-xs pt-1">
-                <a
-                  href="#"
+                <Link
+                  href="/auth/forgot-password"
                   className="font-medium text-[#1E90FF] hover:underline"
-                  onClick={() => alert('Redirecting to password reset...')}
                 >
                   Forgot Password?
-                </a>
+                </Link>
               </div>
             </div>
 
